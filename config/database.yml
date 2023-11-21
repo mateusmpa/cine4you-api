@@ -1,0 +1,19 @@
+default: &default
+  adapter: <%= ENV.fetch('CINE4YOU_API_DATABASE_ADAPTER', 'postgresql') %>
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch('CINE4YOU_API_DATABASE_HOST', 'postgres') %>
+  username: <%= ENV.fetch('CINE4YOU_API_DATABASE_USER', 'postgres') %>
+  password: <%= ENV.fetch('CINE4YOU_API_DATABASE_PASS', 'postgres') %>
+
+development:
+  <<: *default
+  database: <%= "#{ENV.fetch('CINE4YOU_API_DATABASE_NAME', 'cine4you_api')}_development" %>
+
+test:
+  <<: *default
+  database: <%= "#{ENV.fetch('CINE4YOU_API_DATABASE_NAME', 'cine4you_api')}_test" %>
+
+production:
+  <<: *default
+  database: <%= "#{ENV.fetch('CINE4YOU_API_DATABASE_NAME', 'cine4you_api')}_production" %>
