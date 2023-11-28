@@ -7,7 +7,8 @@ class CatalogsController < ApplicationController
   end
 
   def show
-    render json: @catalog
+    @tmdb = TmdbService.new(@catalog).execute
+    render json: @catalog.as_json.merge(@tmdb)
   end
 
   def suggestions

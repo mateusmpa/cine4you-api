@@ -7,6 +7,7 @@ namespace :dev do
       rand(1..10).times do |i|
         Review.create!(
           catalog_id: catalog.id,
+          name: Faker::Name.name,
           rating: rand(1..5),
           comment: Faker::Lorem.paragraph(sentence_count: rand(1..5))
         )

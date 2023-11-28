@@ -1,71 +1,71 @@
 audio_visual_productions = {
   'ação' => {
-    'filme' => ['Duro de Matar', 'Mad Max: Estrada da Fúria', 'John Wick'],
-    'série' => ['24 Horas', 'Breaking Bad', 'Arrow']
+    'filme' => ['duro de matar', 'mad max: estrada da fúria', 'john wick'],
+    'série' => ['24 horas', 'breaking bad', 'arrow']
   },
   'aventura' => {
-    'filme' => ['Indiana Jones: Os Caçadores da Arca Perdida', 'O Senhor dos Anéis: A Sociedade do Anel', 'Piratas do Caribe: A Maldição do Pérola Negra'],
-    'série' => ['Game of Thrones', 'Stranger Things', 'The Witcher']
+    'filme' => ['indiana jones: os caçadores da arca perdida', 'o senhor dos anéis: a sociedade do anel', 'piratas do caribe: a maldição do pérola negra'],
+    'série' => ['game of thrones', 'stranger things', 'the witcher']
   },
   'animação' => {
-    'filme' => ['O Rei Leão', 'Toy Story', 'Frozen: Uma Aventura Congelante'],
-    'série' => ['Avatar: A Lenda de Aang', 'Rick and Morty', 'Bojack Horseman']
+    'filme' => ['o rei leão', 'toy story', 'frozen: uma aventura congelante'],
+    'série' => ['avatar: a lenda de aang', 'rick and morty', 'bojack horseman']
   },
   'comédia' => {
-    'filme' => ['Se Beber, Não Case!', 'Superbad: É Hoje', 'Esqueceram de Mim'],
-    'série' => ['Friends', 'The Office (US)', 'Brooklyn Nine-Nine']
+    'filme' => ['se beber, não case!', 'superbad: é hoje', 'esqueceram de mim'],
+    'série' => ['friends', 'the office (us)', 'brooklyn nine-nine']
   },
   'crime' => {
-    'filme' => ['Pulp Fiction', 'O Poderoso Chefão', 'Os Infiltrados'],
-    'série' => ['Sherlock', 'Mindhunter', 'True Detective']
+    'filme' => ['pulp fiction', 'o poderoso chefão', 'os infiltrados'],
+    'série' => ['sherlock', 'mindhunter', 'true detective']
   },
   'documentário' => {
-    'filme' => ['March of the Penguins', 'Supersize Me: A Dieta do Palhaço', 'Planeta Terra'],
-    'série' => ['Making a Murderer', 'Planet Earth II', 'The Last Dance']
+    'filme' => ['march of the penguins', 'supersize me: a dieta do palhaço', 'planeta terra'],
+    'série' => ['making a murderer', 'planet earth ii', 'the last dance']
   },
   'drama' => {
-    'filme' => ['O Resgate do Soldado Ryan', 'Clube da Luta', 'Forrest Gump'],
-    'série' => ['Breaking Bad', 'The Crown', 'This Is Us']
+    'filme' => ['o resgate do soldado ryan', 'clube da luta', 'forrest gump'],
+    'série' => ['breaking bad', 'the crown', 'this is us']
   },
   'família' => {
-    'filme' => ['Harry Potter e a Pedra Filosofal', 'Procurando Nemo', 'O Rei Leão'],
-    'série' => ['Stranger Things', 'The Mandalorian', 'The Simpsons']
+    'filme' => ['harry potter e a pedra filosofal', 'procurando nemo', 'o rei leão'],
+    'série' => ['stranger things', 'the mandalorian', 'the simpsons']
   },
   'fantasia' => {
-    'filme' => ['Harry Potter e as Relíquias da Morte - Parte 2', 'O Senhor dos Anéis: O Retorno do Rei', 'Alice no País das Maravilhas'],
-    'série' => ['Game of Thrones', 'The Witcher', 'His Dark Materials']
+    'filme' => ['harry potter e as relíquias da morte - parte 2', 'o senhor dos anéis: o retorno do rei', 'alice no país das maravilhas'],
+    'série' => ['game of thrones', 'the witcher', 'his dark materials']
   },
-  'ficção Científica' => {
-    'filme' => ['Blade Runner', 'Matrix', 'Interestelar'],
-    'série' => ['Black Mirror', 'Doctor Who', 'Westworld']
+  'ficção científica' => {
+    'filme' => ['blade runner', 'matrix', 'interestelar'],
+    'série' => ['black mirror', 'doctor who', 'westworld']
   },
   'horror' => {
-    'filme' => ['O Iluminado', 'O Exorcista', 'A Noite dos Mortos-Vivos'],
-    'série' => ['The Haunting of Hill House', 'Stranger Things', 'American Horror Story']
+    'filme' => ['o iluminado', 'o exorcista', 'a noite dos mortos-vivos'],
+    'série' => ['the haunting of hill house', 'stranger things', 'american horror story']
   },
   'mistério' => {
-    'filme' => ['Sherlock Holmes', 'O Código Da Vinci', 'Garota Exemplar'],
-    'série' => ['Sherlock', 'True Detective', 'Mindhunter']
+    'filme' => ['sherlock holmes', 'o código da vinci', 'garota exemplar'],
+    'série' => ['sherlock', 'true detective', 'mindhunter']
   },
   'musical' => {
-    'filme' => ['O Rei do Show', 'La La Land: Cantando Estações', 'Moulin Rouge!'],
-    'série' => ['Glee', 'Crazy Ex-Girlfriend', 'Empire']
+    'filme' => ['o rei do show', 'la la land: cantando estações', 'moulin rouge!'],
+    'série' => ['glee', 'crazy ex-girlfriend', 'empire']
   },
   'romance' => {
-    'filme' => ['Titanic', 'Orgulho e Preconceito', 'Simplesmente Acontece'],
-    'série' => ['Outlander', 'Poldark', 'Modern Love']
+    'filme' => ['titanic', 'orgulho e preconceito', 'simplesmente acontece'],
+    'série' => ['outlander', 'poldark', 'modern love']
   },
   'suspense' => {
-    'filme' => ['Psicose', 'O Silêncio dos Inocentes', 'Seven: Os Sete Crimes Capitais'],
-    'série' => ['Stranger Things', 'Breaking Bad', 'Mindhunter']
+    'filme' => ['psicose', 'o silêncio dos inocentes', 'seven: os sete crimes capitais'],
+    'série' => ['stranger things', 'breaking bad', 'mindhunter']
   },
   'terror' => {
-    'filme' => ['O Sexto Sentido', 'O Chamado', 'Halloween'],
-    'série' => ['The Haunting of Hill House', 'American Horror Story', 'Stranger Things']
+    'filme' => ['o sexto sentido', 'o chamado', 'halloween'],
+    'série' => ['the haunting of hill house', 'american horror story', 'stranger things']
   },
   'western' => {
-    'filme' => ['Era uma Vez no Oeste', 'Os Imperdoáveis', 'Bravura Indômita'],
-    'série' => ['Westworld', 'Deadwood', 'Hell on Wheels']
+    'filme' => ['era uma vez no oeste', 'os imperdoáveis', 'bravura indômita'],
+    'série' => ['westworld', 'deadwood', 'hell on wheels']
   }
 }
 

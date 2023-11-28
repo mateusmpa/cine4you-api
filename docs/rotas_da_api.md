@@ -16,7 +16,7 @@ Esta rota retorna a lista de catálogos.
 
 ### Buscar um catalogo usando parte do titulo
 
-* curl --location 'http://localhost:3000/catalogs?like=Sociedade'
+* curl --location 'http://localhost:3000/catalogs?like=sociedade'
 
 ### Buscar catalogos
 
@@ -91,6 +91,7 @@ curl --location 'http://localhost:3000/catalogs/1/reviews' \
 --header 'Content-Type: application/json' \
 --data '{
     "review" : {
+        "name": "Fulano de Tal",
         "rating": "5",
         "comment": "Maiores qui animi. Sunt ipsam molestiae. Sed numquam laudantium."
     }
