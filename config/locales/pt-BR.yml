@@ -1,2 +1,5 @@
 'pt-BR':
   oi: "Olá mundo"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M:%S"

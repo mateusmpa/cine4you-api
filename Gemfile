@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "3.2.2"
 
 gem "bootsnap", require: false
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'net-http', '~> 0.4.0'
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"

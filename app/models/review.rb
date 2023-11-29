@@ -15,11 +15,15 @@ class Review < ApplicationRecord
     self.rating < 3
   end
 
+  def format_created_at
+    I18n.l(self.created_at)
+  end
+
   def as_json(options={})
     super(
       root: true,
-      except: [:updated_at],
-      methods: [:good?, :neutral?, :bad?],
+      except: [:updated_at, :created_at],
+      methods: [:good?, :neutral?, :bad?, :format_created_at],
       include: [
         {
           catalog: {

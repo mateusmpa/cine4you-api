@@ -3,12 +3,18 @@ class CatalogsController < ApplicationController
   before_action :set_catalogs, only: %i[ index suggestions ]
 
   def index
-    render json: @catalogs
+    results = @catalogs.page(params[:page]).per(params[:per])
+
+    render json: {
+      total_count: results.total_count,
+      per_page: results.limit_value,
+      page: results.current_page,
+      results: results
+    }
   end
 
   def show
-    @tmdb = TmdbService.new(@catalog).execute
-    render json: @catalog.as_json.merge(@tmdb)
+    render json: @catalog
   end
 
   def suggestions
