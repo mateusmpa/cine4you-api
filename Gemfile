@@ -18,7 +18,7 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
-  gem 'factory_bot_rails', '~> 6.4'
+  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.2'
   gem 'faker', '~> 3.2', '>= 3.2.2'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
