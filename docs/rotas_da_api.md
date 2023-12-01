@@ -8,6 +8,84 @@ Esta rota retorna a lista de catálogos.
 
 * curl --location 'http://localhost:3000/up'
 
+## Rotas para "autenticação"
+
+### Criar usuário
+
+```shell
+curl --location 'http://localhost:3000/signup' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "user": {
+    "email": "test@test.com",
+    "password": "123456",
+    "name": "Inspetor Bugiganga"
+  }
+}'
+```
+
+```json
+{
+  "status": {
+    "code": 200,
+    "message": "Signed up successfully."
+  },
+  "data": {
+    "id": 1,
+    "email": "test@test.com",
+    "name": "Inspetor Bugiganga"
+  }
+}
+```
+
+
+### Realizar login
+
+```shell
+curl --location 'http://localhost:3000/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "user": {
+    "email": "test@test.com",
+    "password": "123456"
+  }
+}'
+```
+
+```shell
+authorization Bearer abcd1234.dcba4321.aaaa-bbbb-3333
+```
+
+```json
+{
+  "status": {
+    "code": 200,
+    "message": "Logged in successfully.",
+    "data": {
+      "user": {
+        "id": 1,
+        "email": "test@test.com",
+        "name": "Inspetor Bugiganga"
+      }
+    }
+  }
+}
+```
+
+### Realizar logout
+
+```shell
+curl --location --request DELETE 'http://localhost:3000/logout' \
+--header 'Authorization: Bearer abcd1234.dcba4321.aaaa-bbbb-3333'
+```
+
+```json
+{
+  "status": 200,
+  "message": "Logged out successfully."
+}
+```
+
 ## Rotas para "buscar algo"
 
 ### Buscar um catalogo

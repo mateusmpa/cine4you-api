@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 ruby '3.2.2'
 
 gem 'bootsnap', require: false
+gem 'devise', '~> 4.9', '>= 4.9.3'
+gem 'devise-i18n', '~> 1.12'
+gem 'devise-jwt', '~> 0.11.0'
+gem 'jsonapi-serializer', '~> 2.2'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'net-http', '~> 0.4.0'
 gem 'pg', '~> 1.1'
