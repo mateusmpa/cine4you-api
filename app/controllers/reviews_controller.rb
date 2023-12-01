@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class ReviewsController < ApplicationController
-  before_action :set_review, only: %i[ show ]
-  before_action :set_catalog, only: %i[ index create good bad neutral ]
+  before_action :set_review, only: %i[show]
+  before_action :set_catalog, only: %i[index create good bad neutral]
 
   def index
     @reviews = @catalog.reviews
@@ -41,15 +43,16 @@ class ReviewsController < ApplicationController
   end
 
   private
-    def set_review
-      @review = Review.find(params[:id])
-    end
 
-    def set_catalog
-      @catalog = Catalog.find(params[:catalog_id])
-    end
+  def set_review
+    @review = Review.find(params[:id])
+  end
 
-    def review_params
-      params.require(:review).permit(:rating, :comment, :catalog_id)
-    end
+  def set_catalog
+    @catalog = Catalog.find(params[:catalog_id])
+  end
+
+  def review_params
+    params.require(:review).permit(:rating, :comment, :catalog_id)
+  end
 end

@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 audio_visual_productions = {
   'ação' => {
     'filme' => ['duro de matar', 'mad max: estrada da fúria', 'john wick'],
     'série' => ['24 horas', 'breaking bad', 'arrow']
   },
   'aventura' => {
-    'filme' => ['indiana jones: os caçadores da arca perdida', 'o senhor dos anéis: a sociedade do anel', 'piratas do caribe: a maldição do pérola negra'],
+    'filme' => ['indiana jones: os caçadores da arca perdida', 'o senhor dos anéis: a sociedade do anel',
+                'piratas do caribe: a maldição do pérola negra'],
     'série' => ['game of thrones', 'stranger things', 'the witcher']
   },
   'animação' => {
@@ -32,7 +35,8 @@ audio_visual_productions = {
     'série' => ['stranger things', 'the mandalorian', 'the simpsons']
   },
   'fantasia' => {
-    'filme' => ['harry potter e as relíquias da morte - parte 2', 'o senhor dos anéis: o retorno do rei', 'alice no país das maravilhas'],
+    'filme' => ['harry potter e as relíquias da morte - parte 2', 'o senhor dos anéis: o retorno do rei',
+                'alice no país das maravilhas'],
     'série' => ['game of thrones', 'the witcher', 'his dark materials']
   },
   'ficção científica' => {

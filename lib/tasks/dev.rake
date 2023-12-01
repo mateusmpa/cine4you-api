@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 namespace :dev do
-  desc "Creates fake reviews for catalogs"
+  desc 'Creates fake reviews for catalogs'
   task fake_reviews: :environment do
     puts 'Creating reviews...'
 
     Catalog.all.each do |catalog|
-      rand(1..10).times do |i|
+      rand(1..10).times do |_i|
         Review.create!(
           catalog_id: catalog.id,
           name: Faker::Name.name,

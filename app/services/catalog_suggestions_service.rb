@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CatalogSuggestionsService
   def initialize(catalogs)
     @catalogs = catalogs
@@ -10,6 +12,6 @@ class CatalogSuggestionsService
   private
 
   def max_summed_rating
-    @catalogs.max_by { |catalog| catalog.summed_rating }.summed_rating
+    @catalogs.max_by(&:summed_rating).summed_rating
   end
 end
