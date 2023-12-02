@@ -175,3 +175,24 @@ curl --location 'http://localhost:3000/catalogs/1/reviews' \
     }
 }'
 ```
+
+### Editar uma revisão de um catálogo
+
+```shell
+curl --location --request PUT 'http://localhost:3000/catalogs/1/reviews/9' \
+--header 'Authorization: Bearer abcd1234.dcba4321.99999999' \
+--header 'Content-Type: application/json' \
+--data '{
+    "review": {
+        "rating": 5,
+        "comment": "Maiores qui animi. Sunt ipsam molestiae. Sed numquam laudantium."
+    }
+}'
+```
+
+### Deletar uma revisão de um catálogo
+
+```shell
+curl --location --request DELETE 'http://localhost:3000/catalogs/2/reviews/9' \
+--header 'Authorization: Bearer abcd1234.dcba4321.99999999'
+```

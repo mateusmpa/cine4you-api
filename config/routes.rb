@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :catalogs, only: %i[index show] do
     resource :category, only: [:show]
     resource :genre, only: [:show]
-    resources :reviews, only: %i[index show create] do
+    resources :reviews, only: %i[index show create update destroy] do
       collection do
         get 'good'
         get 'bad'

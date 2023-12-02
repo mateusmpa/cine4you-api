@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!, only: %i[create]
-  before_action :set_review, only: %i[show]
-  before_action :set_catalog, only: %i[index create good bad neutral]
+  before_action :authenticate_user!, only: %i[create update]
+  before_action :set_review, only: %i[show update destroy]
+  before_action :set_catalog, only: %i[index create good bad neutral update]
 
   def index
     @reviews = @catalog.reviews
@@ -24,6 +24,26 @@ class ReviewsController < ApplicationController
       render json: @catalog.reviews, status: :created, location: catalog_reviews_url(@catalog)
     else
       render json: @catalog.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @review.user != current_user
+      render json: { error: 'You are not allowed to update this review' }, status: :unauthorized
+    elsif @review.update(review_params.merge(user_id: current_user.id))
+      render json: @review, status: :ok, location: catalog_reviews_url(@catalog)
+    else
+      render json: @review.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    if @review.user != current_user
+      render json: { error: 'You are not allowed to delete this review' }, status: :unauthorized
+    elsif @review.destroy
+      render json: { message: 'Review deleted successfully' }, status: :ok
+    else
+      render json: @review.errors, status: :unprocessable_entity
     end
   end
 

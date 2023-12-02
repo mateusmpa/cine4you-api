@@ -18,15 +18,15 @@ class Review < ApplicationRecord
     rating < 3
   end
 
-  def format_created_at
-    I18n.l(created_at)
+  def format_updated_at
+    I18n.l(updated_at)
   end
 
   def as_json(_options = {})
     super(
       root: true,
       except: %i[updated_at created_at],
-      methods: %i[good? neutral? bad? format_created_at],
+      methods: %i[good? neutral? bad? format_updated_at],
       include: [user_json]
     )
   end
