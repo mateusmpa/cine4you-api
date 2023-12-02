@@ -166,10 +166,10 @@ curl --location --request DELETE 'http://localhost:3000/logout' \
 
 ```shell
 curl --location 'http://localhost:3000/catalogs/1/reviews' \
+--header 'Authorization: Bearer abcd1234.dcba4321.99999999' \
 --header 'Content-Type: application/json' \
 --data '{
-    "review" : {
-        "name": "Fulano de Tal",
+    "review": {
         "rating": "5",
         "comment": "Maiores qui animi. Sunt ipsam molestiae. Sed numquam laudantium."
     }

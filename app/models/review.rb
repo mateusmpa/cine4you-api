@@ -2,6 +2,7 @@
 
 class Review < ApplicationRecord
   belongs_to :catalog
+  belongs_to :user
 
   validates :rating, inclusion: { in: 0..5 }
 
@@ -26,13 +27,13 @@ class Review < ApplicationRecord
       root: true,
       except: %i[updated_at created_at],
       methods: %i[good? neutral? bad? format_created_at],
-      include: [catalog_json]
+      include: [user_json]
     )
   end
 
   private
 
-  def catalog_json
-    { catalog: { except: %i[created_at updated_at], methods: [:summed_rating] } }
+  def user_json
+    { user: { except: %i[created_at updated_at jti] } }
   end
 end

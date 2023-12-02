@@ -44,8 +44,7 @@ class Catalog < ApplicationRecord
       methods: %i[format_title summed_rating original_title release_date overview vote_average vote_count image_url],
       include: [
         category: category_json,
-        genre: genre_json,
-        reviews: reviews_json
+        genre: genre_json
       ]
     )
   end
@@ -83,12 +82,5 @@ class Catalog < ApplicationRecord
 
   def genre_json
     { except: %i[created_at updated_at] }
-  end
-
-  def reviews_json
-    {
-      except: %i[updated_at created_at],
-      methods: %i[good? neutral? bad? format_created_at]
-    }
   end
 end
