@@ -12,13 +12,15 @@ O projeto possui um Dockerfile e um docker-compose.yml preparado para conseguir 
 
 Para executar a aplicação antes é necessário executar este setup abaixo:
 
+> O projeto possui integração com a API do  TMDB (The Movie Database), então para rodá-lo localmente, alem do setup abaixo, é necessário [criar uma chave no site do TMDB](https://www.themoviedb.org/) e salvá-la na variável `CINE4YOU_API_TMDB_KEY` do arquivo `.env`.
+
 * Configurar projeto: `docker-compose build`
 * Instalar dependencias: `docker-compose run --rm app bundle install`
 * Configurar banco de dados: `docker-compose run --rm app bundle exec rails db:create db:migrate db:seed`
   * Caso precise recriar o banco de dados: `docker-compose run --rm app bundle exec rails db:drop db:create db:migrate db:seed`
 
 > Este setup só precisa ser executado uma vez... excerto caso precise atualizar o projeto.
->
+
 > Se quiser gerar reviews "fake" pode executar este comando: `docker-compose run --rm app bundle exec rails dev:fake_reviews`
 
 E o comando de executar a aplicação é este:
