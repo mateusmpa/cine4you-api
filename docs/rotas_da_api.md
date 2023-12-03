@@ -72,6 +72,21 @@ authorization Bearer abcd1234.dcba4321.aaaa-bbbb-3333
 }
 ```
 
+### Buscar o usuário logado
+
+```shell
+curl --location 'http://localhost:3000/current_user_info' \
+--header 'Authorization: abcd1234.dcba4321.aaaa-bbbb-3333'
+```
+
+```json
+{
+  "id": 2,
+  "email": "cary@jacobson.example",
+  "name": "Salvador Carneiro"
+}
+```
+
 ### Realizar logout
 
 ```shell

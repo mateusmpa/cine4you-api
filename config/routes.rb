@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  get '/current_user_info', to: 'users#current_user_info'
+
   resources :catalogs, only: %i[index show] do
     resource :category, only: [:show]
     resource :genre, only: [:show]
