@@ -15,7 +15,7 @@ RSpec.describe CatalogsController, type: :controller do
           .with(
             URI(
               'https://api.themoviedb.org/3/search/tv?' \
-              "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{catalog.title}"
+              "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{catalog.title}&language=pt-BR"
             )
           )
           .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{}] }.to_json))
@@ -44,7 +44,7 @@ RSpec.describe CatalogsController, type: :controller do
         .with(
           URI(
             'https://api.themoviedb.org/3/search/tv?' \
-            "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{@catalog.title}"
+            "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{@catalog.title}&language=pt-BR"
           )
         )
         .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{}] }.to_json))
@@ -73,7 +73,7 @@ RSpec.describe CatalogsController, type: :controller do
           .with(
             URI(
               'https://api.themoviedb.org/3/search/tv?' \
-              "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{catalog.title}"
+              "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{catalog.title}&language=pt-BR"
             )
           )
           .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{}] }.to_json))

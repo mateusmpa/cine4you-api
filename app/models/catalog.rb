@@ -69,7 +69,8 @@ class Catalog < ApplicationRecord
     @uri ||= URI(base_url)
     @uri.query = URI.encode_www_form(
       'api_key' => ENV.fetch('CINE4YOU_API_TMDB_KEY'),
-      'query' => title
+      'query' => title,
+      'language' => 'pt-BR'
     )
     @uri
   end
