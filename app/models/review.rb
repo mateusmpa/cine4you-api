@@ -34,6 +34,6 @@ class Review < ApplicationRecord
   private
 
   def user_json
-    { user: { except: %i[created_at updated_at jti] } }
+    { user: { except: %i[created_at updated_at jti email] } }
   end
 end
