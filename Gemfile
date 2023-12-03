@@ -35,5 +35,6 @@ group :test do
 end
 
 group :development do
+  gem 'brakeman', '~> 6.0', '>= 6.0.1'
   gem 'rails-erd', '~> 1.5', '>= 1.5.2'
 end
