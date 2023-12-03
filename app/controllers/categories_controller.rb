@@ -13,10 +13,6 @@ class CategoriesController < ApplicationController
     render json: @category
   end
 
-  def destroy
-    @category.destroy!
-  end
-
   private
 
   def set_category

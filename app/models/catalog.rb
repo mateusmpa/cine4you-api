@@ -19,6 +19,8 @@ class Catalog < ApplicationRecord
 
   def release_date
     @release_date ||= I18n.l(Date.parse(data['release_date'] || data['first_air_date']))
+  rescue StandardError
+    nil
   end
 
   def overview
@@ -52,7 +54,15 @@ class Catalog < ApplicationRecord
   private
 
   def data
-    @data ||= JSON.parse(Net::HTTP.get_response(uri).body).fetch('results', [{}]).first
+    if net_http.code == '200'
+      @data ||= JSON.parse(net_http.body).fetch('results', [{}]).first
+    else
+      @data = {}
+    end
+  end
+
+  def net_http
+    @net_http ||= Net::HTTP.get_response(uri)
   end
 
   def uri
