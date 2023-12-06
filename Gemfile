@@ -27,6 +27,7 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
   gem 'rubocop', '~> 1.57', '>= 1.57.2'
+  gem 'simplecov', '~> 0.22.0'
 end
 
 group :test do
@@ -37,5 +38,6 @@ end
 group :development do
   gem 'brakeman', '~> 6.0', '>= 6.0.1'
   gem 'bundler-audit', '~> 0.9.1'
+  gem 'railroady', '~> 1.6'
   gem 'rails-erd', '~> 1.5', '>= 1.5.2'
 end

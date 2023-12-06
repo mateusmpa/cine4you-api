@@ -1,0 +1,18 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"ApplicationRecord" []
+	"Catalog" [shape=Mrecord, label="{Catalog|id :bigint\ltitle :character varying\lcategory_id :bigint\lgenre_id :bigint\lcreated_at :timestamp(6) without time zone\lupdated_at :timestamp(6) without time zone\l}"]
+	"Category" [shape=Mrecord, label="{Category|id :bigint\lkind :character varying\lcreated_at :timestamp(6) without time zone\lupdated_at :timestamp(6) without time zone\l}"]
+	"Genre" [shape=Mrecord, label="{Genre|id :bigint\lkind :character varying\lcreated_at :timestamp(6) without time zone\lupdated_at :timestamp(6) without time zone\l}"]
+	"Review" [shape=Mrecord, label="{Review|id :bigint\lrating :integer\lcomment :text\lcatalog_id :bigint\lcreated_at :timestamp(6) without time zone\lupdated_at :timestamp(6) without time zone\luser_id :bigint\l}"]
+	"User" [shape=Mrecord, label="{User|id :bigint\lemail :character varying\lencrypted_password :character varying\lreset_password_token :character varying\lreset_password_sent_at :timestamp(6) without time zone\lremember_created_at :timestamp(6) without time zone\lcreated_at :timestamp(6) without time zone\lupdated_at :timestamp(6) without time zone\lname :character varying\ljti :character varying\l}"]
+	"Catalog" -> "Category" [arrowtail=crow, arrowhead=crow, dir=both color="#3E2A41"]
+	"Catalog" -> "Genre" [arrowtail=crow, arrowhead=crow, dir=both color="#2A709B"]
+	"Catalog" -> "Review" [arrowtail=crow, arrowhead=crow, dir=both color="#6C9A8B"]
+	"ApplicationRecord" -> "Catalog" [label="", arrowhead="none", arrowtail="onormal"]
+	"ApplicationRecord" -> "Category" [label="", arrowhead="none", arrowtail="onormal"]
+	"ApplicationRecord" -> "Genre" [label="", arrowhead="none", arrowtail="onormal"]
+	"Review" -> "User" [arrowtail=crow, arrowhead=crow, dir=both color="#AC2583"]
+	"ApplicationRecord" -> "Review" [label="", arrowhead="none", arrowtail="onormal"]
+	"ApplicationRecord" -> "User" [label="", arrowhead="none", arrowtail="onormal"]
+}
