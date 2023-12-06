@@ -16,7 +16,7 @@ class CatalogsController < ApplicationController
   end
 
   def show
-    render json: @catalog
+    render json: @catalog.as_json(include_cast: true)
   end
 
   def suggestions

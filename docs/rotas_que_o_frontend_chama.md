@@ -418,10 +418,10 @@ retorno:
     "summed_rating": 3,
     "original_title": "Die Hard",
     "release_date": "15/07/1988",
-    "overview": "NYPD cop John McClane's plan to reconcile with his estranged wife is thrown for a serious loop when, minutes after he arrives at her office, the entire building is overtaken by a group of terrorists. With little help from the LAPD, wisecracking McClane sets out to single-handedly rescue the hostages and bring the bad guys down.",
+    "overview": "O policial de Nova York John McClane está visitando sua família no Natal. Ele participa de uma confraternização de fim de ano na sede da empresa japonesa em que a esposa trabalha. A festa é interrompida por terroristas que invadem o edifício de luxo. McClane não demora a perceber que não há ninguém para salvá-los, a não ser ele próprio.",
     "vote_average": 7.78,
-    "vote_count": 10335,
-    "image_url": "https://image.tmdb.org/t/p/w500/yFihWxQcmqcaBR31QM6Y8gT6aYV.jpg",
+    "vote_count": 10341,
+    "image_url": "https://image.tmdb.org/t/p/w500/rauTKnFle1sp4aXjtYgx4tCWNiK.jpg",
     "category": {
       "id": 1,
       "kind": "filme"
@@ -430,7 +430,329 @@ retorno:
       "id": 1,
       "kind": "ação"
     }
-  }
+  },
+  "cast": [
+    {
+      "name": "Bruce Willis",
+      "character": "John McClane",
+      "profile_path": "https://image.tmdb.org/t/p/w500/eKzKdhqk3RnGTeDju1eOBxdOk3c.jpg"
+    },
+    {
+      "name": "Alan Rickman",
+      "character": "Hans Gruber",
+      "profile_path": "https://image.tmdb.org/t/p/w500/7tADZs4ILE93oJ5pAh6mKQFEq2m.jpg"
+    },
+    {
+      "name": "Alexander Godunov",
+      "character": "Karl",
+      "profile_path": "https://image.tmdb.org/t/p/w500/ubA1t1Rj3dpDZkgli5D17Py0OPh.jpg"
+    },
+    {
+      "name": "Bonnie Bedelia",
+      "character": "Holly Gennaro McClane",
+      "profile_path": "https://image.tmdb.org/t/p/w500/10JhoIaKHQGG0DNbQECTI4gHNn9.jpg"
+    },
+    {
+      "name": "Reginald VelJohnson",
+      "character": "Al Powell",
+      "profile_path": "https://image.tmdb.org/t/p/w500/78x1ceFIKI8DHfEEj9dg4JrGwPa.jpg"
+    },
+    {
+      "name": "Paul Gleason",
+      "character": "Dwayne Robinson",
+      "profile_path": "https://image.tmdb.org/t/p/w500/a7PJofFcVpDxw2wAak1d56J7L4k.jpg"
+    },
+    {
+      "name": "De'voreaux White",
+      "character": "Argyle",
+      "profile_path": "https://image.tmdb.org/t/p/w500/hs2muiYO5VLemomsWalZqOiSQpm.jpg"
+    },
+    {
+      "name": "William Atherton",
+      "character": "Richard Thornburg",
+      "profile_path": "https://image.tmdb.org/t/p/w500/S9W4deKuEa2K12ZiXwlvrC6J4U.jpg"
+    },
+    {
+      "name": "Hart Bochner",
+      "character": "Harry Ellis",
+      "profile_path": "https://image.tmdb.org/t/p/w500/nfC2ByTNS3xoygwYVbUYsx2Zae6.jpg"
+    },
+    {
+      "name": "James Shigeta",
+      "character": "Joseph Yoshinobu Takagi",
+      "profile_path": "https://image.tmdb.org/t/p/w500/HtXVBHBPPHaNpQ8FVefB3AB9Rn.jpg"
+    },
+    {
+      "name": "Bruno Doyon",
+      "character": "Franco",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Andreas Wisniewski",
+      "character": "Tony",
+      "profile_path": "https://image.tmdb.org/t/p/w500/sTI9mDwajw4j6HX3Ze4qoK3lhE7.jpg"
+    },
+    {
+      "name": "Clarence Gilyard Jr.",
+      "character": "Theo",
+      "profile_path": "https://image.tmdb.org/t/p/w500/mTxlCE2RqtRK4NehoX70n2NKmjO.jpg"
+    },
+    {
+      "name": "Joey Plewa",
+      "character": "Alexander",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Lorenzo Caccialanza",
+      "character": "Marco",
+      "profile_path": "https://image.tmdb.org/t/p/w500/4lUFz3Sgp0DOPlt0PbiyuAqENV.jpg"
+    },
+    {
+      "name": "Gerard Bonn",
+      "character": "Kristoff",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Dennis Hayden",
+      "character": "Eddie",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Al Leong",
+      "character": "Uli",
+      "profile_path": "https://image.tmdb.org/t/p/w500/zC01uEOvbdTQIg19LKVu5r2QKan.jpg"
+    },
+    {
+      "name": "Gary Roberts",
+      "character": "Heinrich",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Hans Buhringer",
+      "character": "Fritz",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Wilhelm von Homburg",
+      "character": "James",
+      "profile_path": "https://image.tmdb.org/t/p/w500/dfX2YeRSHQusMcddYn5Db7aEv09.jpg"
+    },
+    {
+      "name": "Robert Davi",
+      "character": "Big Johnson",
+      "profile_path": "https://image.tmdb.org/t/p/w500/yizOUAKs59CwKM6pU30gIP9gTup.jpg"
+    },
+    {
+      "name": "Grand L. Bush",
+      "character": "Little Johnson",
+      "profile_path": "https://image.tmdb.org/t/p/w500/iebc00VeSoRkzkvB5D35hTBbFxa.jpg"
+    },
+    {
+      "name": "Bill Marcus",
+      "character": "City Engineer",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Rick Ducommun",
+      "character": "Walt",
+      "profile_path": "https://image.tmdb.org/t/p/w500/usW5QTa85JuonyRktb3s5HjDD84.jpg"
+    },
+    {
+      "name": "Matt Landers",
+      "character": "Captain Mitchell",
+      "profile_path": "https://image.tmdb.org/t/p/w500/y9Eym5hhdGg8lGXYIIz5P2qIQO6.jpg"
+    },
+    {
+      "name": "Carmine Zozzora",
+      "character": "Rivers",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Dustyn Taylor",
+      "character": "Ginny",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "George Christy",
+      "character": "Dr. Hasseldorf",
+      "profile_path": "https://image.tmdb.org/t/p/w500/u3y2QXhsOlOdHYSQ87skmQ2uBKz.jpg"
+    },
+    {
+      "name": "Anthony Peck",
+      "character": "Young Cop",
+      "profile_path": "https://image.tmdb.org/t/p/w500/laqLC8e50wvH6LeRvJmMPbqtNbr.jpg"
+    },
+    {
+      "name": "Cheryl Baker",
+      "character": "Woman",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Richard Parker",
+      "character": "Man",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "David Ursin",
+      "character": "Harvey Johnson",
+      "profile_path": "https://image.tmdb.org/t/p/w500/trBIE7zB4nlXo8hxNsr27EvrJq9.jpg"
+    },
+    {
+      "name": "Mary Ellen Trainor",
+      "character": "Gail Wallens",
+      "profile_path": "https://image.tmdb.org/t/p/w500/Y926jxSOXikBiqQIptho1VzU9o.jpg"
+    },
+    {
+      "name": "Harri James",
+      "character": "Police Supervisor",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Shelley Pogoda",
+      "character": "Dispatcher",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Selma Archerd",
+      "character": "Hostage",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Scot Bennett",
+      "character": "Hostage",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Rebecca Broussard",
+      "character": "Hostage",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Kate Finlayson",
+      "character": "Hostage",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Shanna Higgins",
+      "character": "Hostage",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Kym Malin",
+      "character": "Hostage",
+      "profile_path": "https://image.tmdb.org/t/p/w500/8SwDz9qTVscYoA5IvpRrjyJU3eE.jpg"
+    },
+    {
+      "name": "Taylor Fry",
+      "character": "Lucy McClane",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Noah Land",
+      "character": "John McClane Jr.",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Betty Carvalho",
+      "character": "Paulina",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Kip Waldo",
+      "character": "Convenience Store Clerk",
+      "profile_path": "https://image.tmdb.org/t/p/w500/netvdsQNDgFKqwLmtM75Di6DpX1.jpg"
+    },
+    {
+      "name": "Mark Goldstein",
+      "character": "Station Manager",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Tracy Reiner",
+      "character": "Thornburg's Assistant",
+      "profile_path": "https://image.tmdb.org/t/p/w500/tfIh2dPe4tGITdlsPZXBNeqvZwW.jpg"
+    },
+    {
+      "name": "Rick Cicetti",
+      "character": "Guard",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Fred Lerner",
+      "character": "Guard",
+      "profile_path": "https://image.tmdb.org/t/p/w500/pkuaIXJKC8ETC66Rtybtnk63xlY.jpg"
+    },
+    {
+      "name": "Bill Margolin",
+      "character": "Producer",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Bob Jennings",
+      "character": "Cameraman",
+      "profile_path": "https://image.tmdb.org/t/p/w500/iopvj0A8nTYNnpGH28lvbmF7LGa.jpg"
+    },
+    {
+      "name": "Bruce P. Schultz",
+      "character": "Cameraman",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "David Katz",
+      "character": "Soundman",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Robert Lesser",
+      "character": "Businessman",
+      "profile_path": "https://image.tmdb.org/t/p/w500/jPwr4Pf9U86UxKnGZY2UR04Aqzl.jpg"
+    },
+    {
+      "name": "Stella Hall",
+      "character": "Stewardess",
+      "profile_path": "https://image.tmdb.org/t/p/w500/hxhaDkZbgOGJ56qZUI7sHMTXVtV.jpg"
+    },
+    {
+      "name": "Terri Lynn Doss",
+      "character": "Girl at Airport",
+      "profile_path": "https://image.tmdb.org/t/p/w500/3E5BSObTf6yAG8cfWt61ymvLsK2.jpg"
+    },
+    {
+      "name": "Jon E. Greene",
+      "character": "Boy at Airport",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "P. Randall Bowers",
+      "character": "Kissing Man",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Michele Laybourn",
+      "character": "Girl in Window",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Charlie Picerni",
+      "character": "Dwayne Robinson's Driver (uncredited)",
+      "profile_path": "https://image.tmdb.org/t/p/w500/kRO5tGbhZOPnUH46keu01i5UYd.jpg"
+    },
+    {
+      "name": "Conrad Hurtt",
+      "character": "SWAT (uncredited)",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Terry Ray",
+      "character": "SWAT (uncredited)",
+      "profile_path": "https://image.tmdb.org/t/p/w500"
+    },
+    {
+      "name": "Eric Kay",
+      "character": "Fireman (uncredited)",
+      "profile_path": "https://image.tmdb.org/t/p/w500/lQJ9bPY6EbQMTX8Mk6BMiMFzxpv.jpg"
+    }
+  ]
 }
 ```
 

@@ -35,6 +35,7 @@ RSpec.describe CatalogsController, type: :controller do
 
   describe 'GET #show' do
     before do
+      tmdb_id = rand(1..9)
       genre = create :genre
       category = create :category
       @catalog = create :catalog, genre_id: genre.id, category_id: category.id
@@ -45,6 +46,15 @@ RSpec.describe CatalogsController, type: :controller do
           URI(
             'https://api.themoviedb.org/3/search/tv?' \
             "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{@catalog.title}&language=pt-BR"
+          )
+        )
+        .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{ 'id' => tmdb_id }] }.to_json))
+
+      allow(Net::HTTP)
+        .to receive(:get_response)
+        .with(
+          URI(
+            "https://api.themoviedb.org/3/tv/#{tmdb_id}/credits?api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}"
           )
         )
         .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{}] }.to_json))

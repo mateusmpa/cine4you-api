@@ -27,6 +27,10 @@ E o comando de executar a aplicação é este:
 
 * `docker-compose up`
 
+> Caso este comando apresente o seguinte erro: `A server is already running (pid: 1, file: /cine4you-api/tmp/pids/server.pid).` o arquivo `server.pid` pode ser deletado manualmente com o seguinte comando:
+>
+> * `sudo rm tmp/pids/server.pid`
+
 ### Acessar console do Rails
 
 * `docker-compose run --rm app bundle exec rails c`

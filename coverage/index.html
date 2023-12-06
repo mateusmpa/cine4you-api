@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-12-06T01:03:22+00:00">2023-12-06T01:03:22+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-12-06T16:13:51+00:00">2023-12-06T16:13:51+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  96.61%
+  96.49%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.85
+         3.97
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>383</b> relevant lines,
-    <span class="green"><b>370</b> lines covered</span> and
-    <span class="red"><b>13</b> lines missed. </span>
+    <b>399</b> relevant lines,
+    <span class="green"><b>385</b> lines covered</span> and
+    <span class="red"><b>14</b> lines missed. </span>
     (<span class="green">
-  96.61%
+  96.49%
 </span>
 )
   </div>
@@ -127,12 +127,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e23b8d18825235899db2cb28f022a9d20d30bc0e" class="src_link" title="app/models/catalog.rb">app/models/catalog.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">97.73 %</td>
-            <td class="cell--number">97</td>
-            <td class="cell--number">44</td>
-            <td class="cell--number">43</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">19.98</td>
+            <td class="green strong cell--number t-file__coverage">96.55 %</td>
+            <td class="cell--number">124</td>
+            <td class="cell--number">58</td>
+            <td class="cell--number">56</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">17.16</td>
             
           </tr>
         
@@ -143,7 +143,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">5.75</td>
+            <td class="cell--number">5.00</td>
             
           </tr>
         
@@ -154,7 +154,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.50</td>
+            <td class="cell--number">4.25</td>
             
           </tr>
         
@@ -187,7 +187,7 @@
             <td class="cell--number">8</td>
             <td class="cell--number">8</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.38</td>
+            <td class="cell--number">3.63</td>
             
           </tr>
         
@@ -315,11 +315,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#885fcc818a76dbbcfd848b45b689b7479bf122bd" class="src_link" title="spec/controllers/catalogs_controller_spec.rb">spec/controllers/catalogs_controller_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">97</td>
-            <td class="cell--number">43</td>
-            <td class="cell--number">43</td>
+            <td class="cell--number">107</td>
+            <td class="cell--number">45</td>
+            <td class="cell--number">45</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.09</td>
+            <td class="cell--number">1.91</td>
             
           </tr>
         
@@ -352,7 +352,7 @@
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">9.67</td>
+            <td class="cell--number">9.00</td>
             
           </tr>
         
@@ -363,7 +363,7 @@
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">10.33</td>
+            <td class="cell--number">9.33</td>
             
           </tr>
         
@@ -374,7 +374,7 @@
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">7.33</td>
+            <td class="cell--number">8.33</td>
             
           </tr>
         
@@ -385,7 +385,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.25</td>
+            <td class="cell--number">1.75</td>
             
           </tr>
         
@@ -888,7 +888,7 @@
 
             
 
-            <code class="ruby">    render json: @catalog</code>
+            <code class="ruby">    render json: @catalog.as_json(include_cast: true)</code>
           </li>
         </div>
       
@@ -2128,7 +2128,7 @@
     <h3>app/models/catalog.rb</h3>
     <h4>
       <span class="green">
-  97.73%
+  96.55%
 </span>
 
       lines covered
@@ -2137,9 +2137,9 @@
     
 
     <div class="t-line-summary">
-      <b>44</b> relevant lines.
-      <span class="green"><b>43</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>58</b> relevant lines.
+      <span class="green"><b>56</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
 
     
@@ -2238,8 +2238,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="9">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="9">
+            <span class="hits">13</span>
             
 
             
@@ -2282,8 +2282,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="101" data-linenumber="13">
-            <span class="hits">101</span>
+          <li class="covered" data-hits="115" data-linenumber="13">
+            <span class="hits">115</span>
             
 
             
@@ -2326,13 +2326,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="17">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="17">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">    @original_title ||= data[&#39;original_title&#39;] || data[&#39;original_name&#39;]</code>
+            <code class="ruby">    @original_title ||= search_data[&#39;original_title&#39;] || search_data[&#39;original_name&#39;]</code>
           </li>
         </div>
       
@@ -2370,13 +2370,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="21">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="21">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">    @release_date ||= I18n.l(Date.parse(data[&#39;release_date&#39;] || data[&#39;first_air_date&#39;]))</code>
+            <code class="ruby">    @release_date ||= I18n.l(Date.parse(search_data[&#39;release_date&#39;] || search_data[&#39;first_air_date&#39;]))</code>
           </li>
         </div>
       
@@ -2392,8 +2392,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="23">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="23">
+            <span class="hits">13</span>
             
 
             
@@ -2436,13 +2436,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="27">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="27">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">    @overview ||= data[&#39;overview&#39;]</code>
+            <code class="ruby">    @overview ||= search_data[&#39;overview&#39;]</code>
           </li>
         </div>
       
@@ -2480,13 +2480,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="31">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="31">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">    @vote_average ||= data[&#39;vote_average&#39;]</code>
+            <code class="ruby">    @vote_average ||= search_data[&#39;vote_average&#39;]</code>
           </li>
         </div>
       
@@ -2524,13 +2524,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="35">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="35">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">    @vote_count ||= data[&#39;vote_count&#39;]</code>
+            <code class="ruby">    @vote_count ||= search_data[&#39;vote_count&#39;]</code>
           </li>
         </div>
       
@@ -2568,13 +2568,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="39">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="13" data-linenumber="39">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">    @image_url ||= &quot;#{base_image_url}#{data[&#39;poster_path&#39;]}&quot;</code>
+            <code class="ruby">    @image_url ||= &quot;#{base_image_url}#{search_data[&#39;poster_path&#39;]}&quot;</code>
           </li>
         </div>
       
@@ -2607,18 +2607,18 @@
 
             
 
-            <code class="ruby">  def as_json(_options = {})</code>
+            <code class="ruby">  def cast</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="43">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="2" data-linenumber="43">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    super(</code>
+            <code class="ruby">    @cast ||= credits_data.map do |cast|</code>
           </li>
         </div>
       
@@ -2629,18 +2629,18 @@
 
             
 
-            <code class="ruby">      root: true,</code>
+            <code class="ruby">      {</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="45">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">      except: %i[title created_at updated_at],</code>
+            
+
+            <code class="ruby">        name: cast[&#39;name&#39;],</code>
           </li>
         </div>
       
@@ -2651,7 +2651,7 @@
 
             
 
-            <code class="ruby">      methods: %i[format_title summed_rating original_title release_date overview vote_average vote_count image_url],</code>
+            <code class="ruby">        character: cast[&#39;character&#39;],</code>
           </li>
         </div>
       
@@ -2662,7 +2662,7 @@
 
             
 
-            <code class="ruby">      include: [</code>
+            <code class="ruby">        profile_path: &quot;#{base_image_url}#{cast[&#39;profile_path&#39;]}&quot;</code>
           </li>
         </div>
       
@@ -2673,7 +2673,7 @@
 
             
 
-            <code class="ruby">        category: category_json,</code>
+            <code class="ruby">      }</code>
           </li>
         </div>
       
@@ -2684,7 +2684,7 @@
 
             
 
-            <code class="ruby">        genre: genre_json</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2695,7 +2695,7 @@
 
             
 
-            <code class="ruby">      ]</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2706,40 +2706,40 @@
 
             
 
-            <code class="ruby">    )</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="53">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="52">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">  def as_json(options = {})</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="13" data-linenumber="53">
+            <span class="hits">13</span>
+            
+
+            
+
+            <code class="ruby">    super(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
+            
+            
+
+            
+
+            <code class="ruby">      root: true,</code>
           </li>
         </div>
       
@@ -2750,40 +2750,40 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      except: %i[title created_at updated_at],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="56">
+            
             
 
             
 
-            <code class="ruby">  def data</code>
+            <code class="ruby">      methods: %i[format_title summed_rating original_title release_date overview vote_average vote_count image_url],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="144" data-linenumber="57">
-            <span class="hits">144</span>
+          <li class="never" data-hits="" data-linenumber="57">
+            
             
 
             
 
-            <code class="ruby">    if net_http.code == &#39;200&#39;</code>
+            <code class="ruby">      include: [category: category_json, genre: genre_json]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="144" data-linenumber="58">
-            <span class="hits">144</span>
+          <li class="covered" data-hits="13" data-linenumber="58">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">      @data ||= JSON.parse(net_http.body).fetch(&#39;results&#39;, [{}]).first</code>
+            <code class="ruby">    ).tap { |json| json[:cast] = cast if options[:include_cast] }</code>
           </li>
         </div>
       
@@ -2794,29 +2794,29 @@
 
             
 
-            <code class="ruby">    else</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="60">
             
             
 
             
 
-            <code class="ruby">      @data = {}</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">  private</code>
           </li>
         </div>
       
@@ -2827,40 +2827,40 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="64">
+          <li class="covered" data-hits="1" data-linenumber="63">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def net_http</code>
+            <code class="ruby">  def tmdb_id</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="162" data-linenumber="65">
-            <span class="hits">162</span>
+          <li class="covered" data-hits="2" data-linenumber="64">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    @net_http ||= Net::HTTP.get_response(uri)</code>
+            <code class="ruby">    @tmdb_id ||= search_data[&#39;id&#39;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2871,12 +2871,34 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="67">
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def search_data</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="106" data-linenumber="68">
+            <span class="hits">106</span>
+            
+
+            
+
+            <code class="ruby">    net_http = Net::HTTP.get_response(search_uri)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="69">
             
             
 
@@ -2887,46 +2909,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="106" data-linenumber="70">
+            <span class="hits">106</span>
             
 
             
 
-            <code class="ruby">  def uri</code>
+            <code class="ruby">    if net_http.code == &#39;200&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="69">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="106" data-linenumber="71">
+            <span class="hits">106</span>
             
 
             
 
-            <code class="ruby">    @uri ||= URI(base_url)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="18" data-linenumber="70">
-            <span class="hits">18</span>
-            
-
-            
-
-            <code class="ruby">    @uri.query = URI.encode_www_form(</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="71">
-            
-            
-
-            
-
-            <code class="ruby">      &#39;api_key&#39; =&gt; ENV.fetch(&#39;CINE4YOU_API_TMDB_KEY&#39;),</code>
+            <code class="ruby">      @search_data ||= JSON.parse(net_http.body).fetch(&#39;results&#39;, [{}]).first</code>
           </li>
         </div>
       
@@ -2937,18 +2937,18 @@
 
             
 
-            <code class="ruby">      &#39;query&#39; =&gt; title,</code>
+            <code class="ruby">    else</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="73">
+          <li class="missed" data-hits="0" data-linenumber="73">
             
             
 
             
 
-            <code class="ruby">      &#39;language&#39; =&gt; &#39;pt-BR&#39;</code>
+            <code class="ruby">      @search_data = {}</code>
           </li>
         </div>
       
@@ -2959,18 +2959,18 @@
 
             
 
-            <code class="ruby">    )</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="75">
-            <span class="hits">18</span>
+          <li class="never" data-hits="" data-linenumber="75">
+            
             
 
             
 
-            <code class="ruby">    @uri</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2981,12 +2981,34 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="77">
+          <li class="covered" data-hits="1" data-linenumber="77">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def credits_data</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="78">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    net_http = Net::HTTP.get_response(credits_uri)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="79">
             
             
 
@@ -2997,68 +3019,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="78">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="80">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">  def base_url</code>
+            <code class="ruby">    if net_http.code == &#39;200&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="79">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="2" data-linenumber="81">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    @base_url ||= &quot;https://api.themoviedb.org/3/search/#{type}&quot;</code>
+            <code class="ruby">      @credits_data ||= JSON.parse(net_http.body).fetch(&#39;cast&#39;, [{}])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="80">
+          <li class="never" data-hits="" data-linenumber="82">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    else</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="81">
+          <li class="missed" data-hits="0" data-linenumber="83">
             
             
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="82">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def base_image_url</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="18" data-linenumber="83">
-            <span class="hits">18</span>
-            
-
-            
-
-            <code class="ruby">    @base_image_url ||= &#39;https://image.tmdb.org/t/p/w500&#39;</code>
+            <code class="ruby">      @credits_data = {}</code>
           </li>
         </div>
       
@@ -3069,7 +3069,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -3080,45 +3080,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="86">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def type</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="18" data-linenumber="87">
-            <span class="hits">18</span>
-            
-
-            
-
-            <code class="ruby">    category.kind == &#39;filme&#39; ? &#39;movie&#39; : &#39;tv&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="88">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="89">
+          <li class="never" data-hits="" data-linenumber="86">
             
             
 
@@ -3129,35 +3096,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="90">
+          <li class="covered" data-hits="1" data-linenumber="87">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def category_json</code>
+            <code class="ruby">  def credits_uri</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="91">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="2" data-linenumber="88">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    { except: %i[created_at updated_at] }</code>
+            <code class="ruby">    @credits_uri ||= URI(&quot;#{base_url}/#{type}/#{tmdb_id}/credits&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="92">
+          <li class="covered" data-hits="2" data-linenumber="89">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @credits_uri.query = URI.encode_www_form(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="90">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      &#39;api_key&#39; =&gt; ENV.fetch(&#39;CINE4YOU_API_TMDB_KEY&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="91">
+            
+            
+
+            
+
+            <code class="ruby">    )</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="92">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @credits_uri</code>
           </li>
         </div>
       
@@ -3168,34 +3168,111 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="94">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="94">
+          <li class="covered" data-hits="1" data-linenumber="95">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def genre_json</code>
+            <code class="ruby">  def search_uri</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="95">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="106" data-linenumber="96">
+            <span class="hits">106</span>
             
 
             
 
-            <code class="ruby">    { except: %i[created_at updated_at] }</code>
+            <code class="ruby">    @search_uri ||= URI(&quot;#{base_url}/search/#{type}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="96">
+          <li class="covered" data-hits="106" data-linenumber="97">
+            <span class="hits">106</span>
+            
+
+            
+
+            <code class="ruby">    @search_uri.query = URI.encode_www_form(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="98">
+            
+            
+
+            
+
+            <code class="ruby">      &#39;api_key&#39; =&gt; ENV.fetch(&#39;CINE4YOU_API_TMDB_KEY&#39;),</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="99">
+            
+            
+
+            
+
+            <code class="ruby">      &#39;query&#39; =&gt; title,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="100">
+            
+            
+
+            
+
+            <code class="ruby">      &#39;language&#39; =&gt; &#39;pt-BR&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby">    )</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="106" data-linenumber="102">
+            <span class="hits">106</span>
+            
+
+            
+
+            <code class="ruby">    @search_uri</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="103">
             
             
 
@@ -3206,7 +3283,227 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="97">
+          <li class="never" data-hits="" data-linenumber="104">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="105">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def base_url</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="15" data-linenumber="106">
+            <span class="hits">15</span>
+            
+
+            
+
+            <code class="ruby">    @base_url ||= &#39;https://api.themoviedb.org/3&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="107">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="109">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def base_image_url</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="15" data-linenumber="110">
+            <span class="hits">15</span>
+            
+
+            
+
+            <code class="ruby">    @base_image_url ||= &#39;https://image.tmdb.org/t/p/w500&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="111">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="112">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="113">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def type</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="15" data-linenumber="114">
+            <span class="hits">15</span>
+            
+
+            
+
+            <code class="ruby">    category.kind == &#39;filme&#39; ? &#39;movie&#39; : &#39;tv&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="115">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="116">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="117">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def category_json</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="13" data-linenumber="118">
+            <span class="hits">13</span>
+            
+
+            
+
+            <code class="ruby">    { except: %i[created_at updated_at] }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="119">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="120">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="121">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def genre_json</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="13" data-linenumber="122">
+            <span class="hits">13</span>
+            
+
+            
+
+            <code class="ruby">    { except: %i[created_at updated_at] }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="123">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="124">
             
             
 
@@ -3314,8 +3611,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="7">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="17" data-linenumber="7">
+            <span class="hits">17</span>
             
 
             
@@ -3444,8 +3741,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="7">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="14" data-linenumber="7">
+            <span class="hits">14</span>
             
 
             
@@ -4208,8 +4505,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="9">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="12" data-linenumber="9">
+            <span class="hits">12</span>
             
 
             
@@ -4274,8 +4571,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="15">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="10" data-linenumber="15">
+            <span class="hits">10</span>
             
 
             
@@ -10749,8 +11046,8 @@
     
 
     <div class="t-line-summary">
-      <b>43</b> relevant lines.
-      <span class="green"><b>43</b> lines covered</span> and
+      <b>45</b> relevant lines.
+      <span class="green"><b>45</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -10894,8 +11191,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="13">
-            <span class="hits">11</span>
+          <li class="covered" data-hits="8" data-linenumber="13">
+            <span class="hits">8</span>
             
 
             
@@ -11175,7 +11472,7 @@
 
             
 
-            <code class="ruby">      genre = create :genre</code>
+            <code class="ruby">      tmdb_id = rand(1..9)</code>
           </li>
         </div>
       
@@ -11186,7 +11483,7 @@
 
             
 
-            <code class="ruby">      category = create :category</code>
+            <code class="ruby">      genre = create :genre</code>
           </li>
         </div>
       
@@ -11197,12 +11494,23 @@
 
             
 
+            <code class="ruby">      category = create :category</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="41">
+            <span class="hits">2</span>
+            
+
+            
+
             <code class="ruby">      @catalog = create :catalog, genre_id: genre.id, category_id: category.id</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -11213,7 +11521,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="42">
+          <li class="covered" data-hits="2" data-linenumber="43">
             <span class="hits">2</span>
             
 
@@ -11224,7 +11532,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -11235,7 +11543,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
@@ -11246,7 +11554,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -11257,7 +11565,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -11268,7 +11576,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -11279,7 +11587,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -11290,7 +11598,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -11301,24 +11609,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
-            
-
-            <code class="ruby">        .and_return(instance_double(Net::HTTPOK, code: &#39;200&#39;, body: { &#39;results&#39; =&gt; [{}] }.to_json))</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="51">
             
             
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        .and_return(instance_double(Net::HTTPOK, code: &#39;200&#39;, body: { &#39;results&#39; =&gt; [{ &#39;id&#39; =&gt; tmdb_id }] }.to_json))</code>
           </li>
         </div>
       
@@ -11334,35 +11631,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="53">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    it &#39;returns http success&#39; do</code>
+            <code class="ruby">      allow(Net::HTTP)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="54">
+            
             
 
             
 
-            <code class="ruby">      get :show, params: { id: @catalog.id }</code>
+            <code class="ruby">        .to receive(:get_response)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="55">
+            
             
 
             
 
-            <code class="ruby">      expect(response).to have_http_status(:success)</code>
+            <code class="ruby">        .with(</code>
           </li>
         </div>
       
@@ -11373,7 +11670,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">          URI(</code>
           </li>
         </div>
       
@@ -11384,40 +11681,40 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">            &quot;https://api.themoviedb.org/3/tv/#{tmdb_id}/credits?api_key=#{ENV.fetch(&#39;CINE4YOU_API_TMDB_KEY&#39;, nil)}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="58">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="58">
+            
             
 
             
 
-            <code class="ruby">    it &#39;returns the correct catalog&#39; do</code>
+            <code class="ruby">          )</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="59">
+            
             
 
             
 
-            <code class="ruby">      get :show, params: { id: @catalog.id }</code>
+            <code class="ruby">        )</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="60">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="60">
+            
             
 
             
 
-            <code class="ruby">      expect(JSON.parse(response.body)[&#39;catalog&#39;][&#39;id&#39;]).to eq(@catalog.id)</code>
+            <code class="ruby">        .and_return(instance_double(Net::HTTPOK, code: &#39;200&#39;, body: { &#39;results&#39; =&gt; [{}] }.to_json))</code>
           </li>
         </div>
       
@@ -11439,276 +11736,12 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="64">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe &#39;GET #suggestions&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="65">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    before do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="66">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      genre = create :genre</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="67">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      category = create :category</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="68">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      @catalogs = create_list(:catalog, rand(1..9), genre_id: genre.id, category_id: category.id)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="70">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      @catalogs.each do |catalog|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="9" data-linenumber="71">
-            <span class="hits">9</span>
-            
-
-            
-
-            <code class="ruby">        allow(Net::HTTP)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="72">
-            
-            
-
-            
-
-            <code class="ruby">          .to receive(:get_response)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="73">
-            
-            
-
-            
-
-            <code class="ruby">          .with(</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="74">
-            
-            
-
-            
-
-            <code class="ruby">            URI(</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="75">
-            
-            
-
-            
-
-            <code class="ruby">              &#39;https://api.themoviedb.org/3/search/tv?&#39; \</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="76">
-            
-            
-
-            
-
-            <code class="ruby">              &quot;api_key=#{ENV.fetch(&#39;CINE4YOU_API_TMDB_KEY&#39;, nil)}&amp;query=#{catalog.title}&amp;language=pt-BR&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="77">
-            
-            
-
-            
-
-            <code class="ruby">            )</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="78">
-            
-            
-
-            
-
-            <code class="ruby">          )</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="79">
-            
-            
-
-            
-
-            <code class="ruby">          .and_return(instance_double(Net::HTTPOK, code: &#39;200&#39;, body: { &#39;results&#39; =&gt; [{}] }.to_json))</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="80">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="81">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="11" data-linenumber="82">
-            <span class="hits">11</span>
-            
-
-            
-
-            <code class="ruby">      @suggested_catalogs = rand(1..9).times.map { @catalogs.sample }.uniq</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="83">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      user = create :user</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="7" data-linenumber="84">
-            <span class="hits">7</span>
-            
-
-            
-
-            <code class="ruby">      @suggested_catalogs.each { |catalog| create :review, catalog_id: catalog.id, rating: 5, user_id: user.id }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="85">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="86">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="87">
+          <li class="covered" data-hits="1" data-linenumber="63">
             <span class="hits">1</span>
             
 
@@ -11719,18 +11752,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="88">
+          <li class="covered" data-hits="1" data-linenumber="64">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      get :suggestions</code>
+            <code class="ruby">      get :show, params: { id: @catalog.id }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="89">
+          <li class="covered" data-hits="1" data-linenumber="65">
             <span class="hits">1</span>
             
 
@@ -11741,13 +11774,277 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="90">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
             
 
             <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns the correct catalog&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get :show, params: { id: @catalog.id }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="70">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(JSON.parse(response.body)[&#39;catalog&#39;][&#39;id&#39;]).to eq(@catalog.id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="74">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;GET #suggestions&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    before do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="76">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      genre = create :genre</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="77">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      category = create :category</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="78">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      @catalogs = create_list(:catalog, rand(1..9), genre_id: genre.id, category_id: category.id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="79">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="80">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      @catalogs.each do |catalog|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="81">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">        allow(Net::HTTP)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="82">
+            
+            
+
+            
+
+            <code class="ruby">          .to receive(:get_response)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="83">
+            
+            
+
+            
+
+            <code class="ruby">          .with(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="84">
+            
+            
+
+            
+
+            <code class="ruby">            URI(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="85">
+            
+            
+
+            
+
+            <code class="ruby">              &#39;https://api.themoviedb.org/3/search/tv?&#39; \</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="86">
+            
+            
+
+            
+
+            <code class="ruby">              &quot;api_key=#{ENV.fetch(&#39;CINE4YOU_API_TMDB_KEY&#39;, nil)}&amp;query=#{catalog.title}&amp;language=pt-BR&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="87">
+            
+            
+
+            
+
+            <code class="ruby">            )</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="88">
+            
+            
+
+            
+
+            <code class="ruby">          )</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="89">
+            
+            
+
+            
+
+            <code class="ruby">          .and_return(instance_double(Net::HTTPOK, code: &#39;200&#39;, body: { &#39;results&#39; =&gt; [{}] }.to_json))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="90">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -11763,35 +12060,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="92">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="7" data-linenumber="92">
+            <span class="hits">7</span>
             
 
             
 
-            <code class="ruby">    it &#39;returns all catalogs&#39; do</code>
+            <code class="ruby">      @suggested_catalogs = rand(1..9).times.map { @catalogs.sample }.uniq</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="93">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="93">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">      get :suggestions, params: { per: @catalogs.size }</code>
+            <code class="ruby">      user = create :user</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="94">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="5" data-linenumber="94">
+            <span class="hits">5</span>
             
 
             
 
-            <code class="ruby">      expect(JSON.parse(response.body).size).to eq(@suggested_catalogs.size)</code>
+            <code class="ruby">      @suggested_catalogs.each { |catalog| create :review, catalog_id: catalog.id, rating: 5, user_id: user.id }</code>
           </li>
         </div>
       
@@ -11813,12 +12110,122 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="97">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns http success&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="98">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get :suggestions</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="99">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response).to have_http_status(:success)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="100">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="102">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;returns all catalogs&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="103">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get :suggestions, params: { per: @catalogs.size }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="104">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(JSON.parse(response.body).size).to eq(@suggested_catalogs.size)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="105">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="106">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="97">
+          <li class="never" data-hits="" data-linenumber="107">
             
             
 
@@ -13110,8 +13517,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="27" data-linenumber="3">
-            <span class="hits">27</span>
+          <li class="covered" data-hits="25" data-linenumber="3">
+            <span class="hits">25</span>
             
 
             
@@ -13196,8 +13603,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="29" data-linenumber="3">
-            <span class="hits">29</span>
+          <li class="covered" data-hits="26" data-linenumber="3">
+            <span class="hits">26</span>
             
 
             
@@ -13282,8 +13689,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="20" data-linenumber="3">
-            <span class="hits">20</span>
+          <li class="covered" data-hits="23" data-linenumber="3">
+            <span class="hits">23</span>
             
 
             
@@ -13368,8 +13775,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="3">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="4" data-linenumber="3">
+            <span class="hits">4</span>
             
 
             

@@ -14,69 +14,96 @@ class Catalog < ApplicationRecord
   end
 
   def original_title
-    @original_title ||= data['original_title'] || data['original_name']
+    @original_title ||= search_data['original_title'] || search_data['original_name']
   end
 
   def release_date
-    @release_date ||= I18n.l(Date.parse(data['release_date'] || data['first_air_date']))
+    @release_date ||= I18n.l(Date.parse(search_data['release_date'] || search_data['first_air_date']))
   rescue StandardError
     nil
   end
 
   def overview
-    @overview ||= data['overview']
+    @overview ||= search_data['overview']
   end
 
   def vote_average
-    @vote_average ||= data['vote_average']
+    @vote_average ||= search_data['vote_average']
   end
 
   def vote_count
-    @vote_count ||= data['vote_count']
+    @vote_count ||= search_data['vote_count']
   end
 
   def image_url
-    @image_url ||= "#{base_image_url}#{data['poster_path']}"
+    @image_url ||= "#{base_image_url}#{search_data['poster_path']}"
   end
 
-  def as_json(_options = {})
+  def cast
+    @cast ||= credits_data.map do |cast|
+      {
+        name: cast['name'],
+        character: cast['character'],
+        profile_path: "#{base_image_url}#{cast['profile_path']}"
+      }
+    end
+  end
+
+  def as_json(options = {})
     super(
       root: true,
       except: %i[title created_at updated_at],
       methods: %i[format_title summed_rating original_title release_date overview vote_average vote_count image_url],
-      include: [
-        category: category_json,
-        genre: genre_json
-      ]
-    )
+      include: [category: category_json, genre: genre_json]
+    ).tap { |json| json[:cast] = cast if options[:include_cast] }
   end
 
   private
 
-  def data
+  def tmdb_id
+    @tmdb_id ||= search_data['id']
+  end
+
+  def search_data
+    net_http = Net::HTTP.get_response(search_uri)
+
     if net_http.code == '200'
-      @data ||= JSON.parse(net_http.body).fetch('results', [{}]).first
+      @search_data ||= JSON.parse(net_http.body).fetch('results', [{}]).first
     else
-      @data = {}
+      @search_data = {}
     end
   end
 
-  def net_http
-    @net_http ||= Net::HTTP.get_response(uri)
+  def credits_data
+    net_http = Net::HTTP.get_response(credits_uri)
+
+    if net_http.code == '200'
+      @credits_data ||= JSON.parse(net_http.body).fetch('cast', [{}])
+    else
+      @credits_data = {}
+    end
   end
 
-  def uri
-    @uri ||= URI(base_url)
-    @uri.query = URI.encode_www_form(
+  def credits_uri
+    @credits_uri ||= URI("#{base_url}/#{type}/#{tmdb_id}/credits")
+    @credits_uri.query = URI.encode_www_form(
+      'api_key' => ENV.fetch('CINE4YOU_API_TMDB_KEY')
+    )
+    @credits_uri
+  end
+
+  def search_uri
+    @search_uri ||= URI("#{base_url}/search/#{type}")
+    @search_uri.query = URI.encode_www_form(
       'api_key' => ENV.fetch('CINE4YOU_API_TMDB_KEY'),
       'query' => title,
       'language' => 'pt-BR'
     )
-    @uri
+    @search_uri
   end
 
   def base_url
-    @base_url ||= "https://api.themoviedb.org/3/search/#{type}"
+    @base_url ||= 'https://api.themoviedb.org/3'
   end
 
   def base_image_url
