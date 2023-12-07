@@ -14,39 +14,31 @@ class Catalog < ApplicationRecord
   end
 
   def original_title
-    @original_title ||= search_data['original_title'] || search_data['original_name']
+    @original_title ||= tmdb_from_redis['original_title']
   end
 
   def release_date
-    @release_date ||= I18n.l(Date.parse(search_data['release_date'] || search_data['first_air_date']))
-  rescue StandardError
-    nil
+    @release_date ||= tmdb_from_redis['release_date']
   end
 
   def overview
-    @overview ||= search_data['overview']
+    @overview ||= tmdb_from_redis['overview']
   end
 
   def vote_average
-    @vote_average ||= search_data['vote_average']
+    @vote_average ||= tmdb_from_redis['vote_average']
   end
 
   def vote_count
-    @vote_count ||= search_data['vote_count']
+    @vote_count ||= tmdb_from_redis['vote_count']
   end
 
   def image_url
-    @image_url ||= "#{base_image_url}#{search_data['poster_path']}"
+    @image_url ||= tmdb_from_redis['image_url']
   end
 
   def cast
-    @cast ||= credits_data.map do |cast|
-      {
-        name: cast['name'],
-        character: cast['character'],
-        profile_path: "#{base_image_url}#{cast['profile_path']}"
-      }
-    end
+    @cast ||= tmdb_from_redis['cast']
   end
 
   def as_json(options = {})
@@ -60,58 +52,8 @@ class Catalog < ApplicationRecord
 
   private
 
-  def tmdb_id
-    @tmdb_id ||= search_data['id']
-  end
-
-  def search_data
-    net_http = Net::HTTP.get_response(search_uri)
-
-    if net_http.code == '200'
-      @search_data ||= JSON.parse(net_http.body).fetch('results', [{}]).first
-    else
-      @search_data = {}
-    end
-  end
-
-  def credits_data
-    net_http = Net::HTTP.get_response(credits_uri)
-
-    if net_http.code == '200'
-      @credits_data ||= JSON.parse(net_http.body).fetch('cast', [{}])
-    else
-      @credits_data = {}
-    end
-  end
-
-  def credits_uri
-    @credits_uri ||= URI("#{base_url}/#{type}/#{tmdb_id}/credits")
-    @credits_uri.query = URI.encode_www_form(
-      'api_key' => ENV.fetch('CINE4YOU_API_TMDB_KEY')
-    )
-    @credits_uri
-  end
-
-  def search_uri
-    @search_uri ||= URI("#{base_url}/search/#{type}")
-    @search_uri.query = URI.encode_www_form(
-      'api_key' => ENV.fetch('CINE4YOU_API_TMDB_KEY'),
-      'query' => title,
-      'language' => 'pt-BR'
-    )
-    @search_uri
-  end
-
-  def base_url
-    @base_url ||= 'https://api.themoviedb.org/3'
-  end
-
-  def base_image_url
-    @base_image_url ||= 'https://image.tmdb.org/t/p/w500'
-  end
-
-  def type
-    category.kind == 'filme' ? 'movie' : 'tv'
+  def tmdb_from_redis
+    @tmdb_from_redis ||= JSON.parse(Redis.new(url: ENV.fetch('CINE4YOU_API_REDIS_URL', nil)).get("catalog:#{id}"))
   end
 
   def category_json

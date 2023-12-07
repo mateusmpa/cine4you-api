@@ -1,0 +1,5 @@
+search_catalogs_from_imdb:
+  cron: '0 */6 * * *' # Executa a cada 6 horas
+  class: SearchCatalogsFromImdbWorker
+  args: []
+  queue: imdb

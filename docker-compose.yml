@@ -8,9 +8,20 @@ services:
     environment:
       - POSTGRES_PASSWORD=postgres
 
+  redis:
+    image: 'redis:6.2.5'
+    ports:
+      - '6379:6379'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
   app:
     build: .
     depends_on:
+      - 'postgres'
+      - 'redis'
+    links:
+      - 'redis'
       - 'postgres'
     command: bundle exec rails s -b 0.0.0.0
     ports:
@@ -18,6 +29,33 @@ services:
     volumes:
       - '.:/cine4you-api'
       - 'box:/box'
+
+  sidekiq:
+    build: .
+    depends_on:
+      - 'postgres'
+      - 'redis'
+    links:
+      - 'redis'
+      - 'postgres'
+    command: bundle exec sidekiq -c 1 -q imdb
+    volumes:
+      - '.:/cine4you-api'
+      - 'box:/box'
+
+  # schemaspy:
+  #   image: schemaspy/schemaspy
+  #   volumes:
+  #     - ./schemaspy/output:/output
+  #     - ./schemaspy/config:/config
+  #   command: [
+  #     "-configFile",
+  #     "/config/schemaspy.properties",
+  #     "-imageformat",
+  #     "svg"
+  #   ]
+  #   depends_on:
+  #     - postgres
 
 volumes:
   postgres:

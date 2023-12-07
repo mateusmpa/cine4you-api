@@ -16,7 +16,10 @@ gem 'puma', '>= 5.0'
 gem 'rack-cors'
 gem 'rails', '~> 7.1.2'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.8'
+gem 'redis', '~> 5.0', '>= 5.0.8'
 gem 'rspec', '~> 3.4'
+gem 'sidekiq', '~> 7.2'
+gem 'sidekiq-cron', '~> 1.11'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
 group :development, :test do

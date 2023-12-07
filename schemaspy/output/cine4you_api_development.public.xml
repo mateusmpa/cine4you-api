@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><database name="cine4you_api_development" schema="public" type="PostgreSQL - 16.1 (Debian 16.1-1.pgdg120+1)">
+   <sequences>
+      <sequence increment="1" name="catalogs_id_seq" startValue="1"/>
+      <sequence increment="1" name="categories_id_seq" startValue="1"/>
+      <sequence increment="1" name="genres_id_seq" startValue="1"/>
+      <sequence increment="1" name="reviews_id_seq" startValue="1"/>
+      <sequence increment="1" name="users_id_seq" startValue="1"/>
+   </sequences>
+   <tables>
+      <table name="ar_internal_metadata" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="key" nullable="false" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="value" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="created_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="3" name="updated_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <primaryKey column="key" sequenceNumberInPK="1"/>
+         <index name="ar_internal_metadata_pkey" unique="true">
+            <column ascending="true" name="key"/>
+         </index>
+      </table>
+      <table name="catalogs" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('catalogs_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="catalog_id" foreignKey="fk_rails_6612b50057" implied="false" onDeleteCascade="false" schema="public" table="reviews"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="title" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="category_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="fk_rails_b30841962e" implied="false" onDeleteCascade="false" schema="public" table="categories"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="genre_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="fk_rails_9621969874" implied="false" onDeleteCascade="false" schema="public" table="genres"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="4" name="created_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="5" name="updated_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="catalogs_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="index_catalogs_on_category_id" unique="false">
+            <column ascending="true" name="category_id"/>
+         </index>
+         <index name="index_catalogs_on_genre_id" unique="false">
+            <column ascending="true" name="genre_id"/>
+         </index>
+      </table>
+      <table name="categories" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('categories_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="category_id" foreignKey="fk_rails_b30841962e" implied="false" onDeleteCascade="false" schema="public" table="catalogs"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="kind" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="created_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="3" name="updated_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="categories_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="genres" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('genres_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="genre_id" foreignKey="fk_rails_9621969874" implied="false" onDeleteCascade="false" schema="public" table="catalogs"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="kind" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="2" name="created_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="3" name="updated_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="genres_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="reviews" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('reviews_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="rating" nullable="true" remarks="" size="10" type="int4" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="comment" nullable="true" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="catalog_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="fk_rails_6612b50057" implied="false" onDeleteCascade="false" schema="public" table="catalogs"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="4" name="created_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="5" name="updated_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="user_id" nullable="false" remarks="" size="19" type="int8" typeCode="-5">
+            <parent column="id" foreignKey="fk_rails_74a66bd6c5" implied="false" onDeleteCascade="false" schema="public" table="users"/>
+         </column>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="reviews_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="index_reviews_on_catalog_id" unique="false">
+            <column ascending="true" name="catalog_id"/>
+         </index>
+         <index name="index_reviews_on_user_id" unique="false">
+            <column ascending="true" name="user_id"/>
+         </index>
+      </table>
+      <table name="schema_migrations" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="version" nullable="false" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <primaryKey column="version" sequenceNumberInPK="1"/>
+         <index name="schema_migrations_pkey" unique="true">
+            <column ascending="true" name="version"/>
+         </index>
+      </table>
+      <table name="users" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('users_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="19" type="bigserial" typeCode="-5">
+            <child column="user_id" foreignKey="fk_rails_74a66bd6c5" implied="false" onDeleteCascade="false" schema="public" table="reviews"/>
+         </column>
+         <column autoUpdated="false" defaultValue="''::character varying" digits="0" id="1" name="email" nullable="false" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="''::character varying" digits="0" id="2" name="encrypted_password" nullable="false" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="reset_password_token" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="4" name="reset_password_sent_at" nullable="true" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="5" name="remember_created_at" nullable="true" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="6" name="created_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="6" id="7" name="updated_at" nullable="false" remarks="" size="29" type="timestamp" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="name" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="jti" nullable="true" remarks="" size="2147483647" type="varchar" typeCode="12"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="users_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="index_users_on_email" unique="true">
+            <column ascending="true" name="email"/>
+         </index>
+         <index name="index_users_on_jti" unique="false">
+            <column ascending="true" name="jti"/>
+         </index>
+         <index name="index_users_on_reset_password_token" unique="true">
+            <column ascending="true" name="reset_password_token"/>
+         </index>
+      </table>
+   </tables>
+</database>

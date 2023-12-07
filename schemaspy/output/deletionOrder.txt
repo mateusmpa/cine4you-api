@@ -1,0 +1,7 @@
+schema_migrations
+ar_internal_metadata
+reviews
+catalogs
+users
+genres
+categories
