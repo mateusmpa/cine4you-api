@@ -4,23 +4,40 @@ require 'rails_helper'
 
 RSpec.describe CatalogsController, type: :controller do
   describe 'GET #index' do
-    before do
+    before(:each) do
       genre = create :genre
       category = create :category
       @catalogs = create_list(:catalog, rand(1..9), genre_id: genre.id, category_id: category.id)
 
       @catalogs.each do |catalog|
-        allow(Net::HTTP)
-          .to receive(:get_response)
-          .with(
-            URI(
-              'https://api.themoviedb.org/3/search/tv?' \
-              "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{catalog.title}&language=pt-BR"
+        allow(Redis)
+          .to receive(:new)
+          .with(url: ENV.fetch('CINE4YOU_API_REDIS_URL', nil))
+          .and_return(
+            instance_double(
+              Redis,
+              get: {
+                id: catalog.id,
+                original_title: Faker::Movie.title,
+                release_date: '2022-01-01',
+                overview: Faker::Lorem.paragraph,
+                vote_average: '9.9',
+                vote_count: '999',
+                poster_path: '/poster_path.jpg',
+                cast: [
+                  {
+                    name: Faker::Name.name,
+                    character: Faker::Name.name,
+                    profile_path: '/profile_path.jpg'
+                  }
+                ]
+              }.to_json
             )
           )
-          .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{}] }.to_json))
       end
     end
+
+    let(:redis) { instance_double(Redis, get: double) }
 
     it 'returns http success' do
       get :index
@@ -35,29 +52,35 @@ RSpec.describe CatalogsController, type: :controller do
 
   describe 'GET #show' do
     before do
-      tmdb_id = rand(1..9)
+      rand(1..9)
       genre = create :genre
       category = create :category
       @catalog = create :catalog, genre_id: genre.id, category_id: category.id
 
-      allow(Net::HTTP)
-        .to receive(:get_response)
-        .with(
-          URI(
-            'https://api.themoviedb.org/3/search/tv?' \
-            "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{@catalog.title}&language=pt-BR"
+      allow(Redis)
+        .to receive(:new)
+        .with(url: ENV.fetch('CINE4YOU_API_REDIS_URL', nil))
+        .and_return(
+          instance_double(
+            Redis,
+            get: {
+              id: @catalog.id,
+              original_title: Faker::Movie.title,
+              release_date: '2022-01-01',
+              overview: Faker::Lorem.paragraph,
+              vote_average: '9.9',
+              vote_count: '999',
+              poster_path: '/poster_path.jpg',
+              cast: [
+                {
+                  name: Faker::Name.name,
+                  character: Faker::Name.name,
+                  profile_path: '/profile_path.jpg'
+                }
+              ]
+            }.to_json
           )
         )
-        .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{ 'id' => tmdb_id }] }.to_json))
-
-      allow(Net::HTTP)
-        .to receive(:get_response)
-        .with(
-          URI(
-            "https://api.themoviedb.org/3/tv/#{tmdb_id}/credits?api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}"
-          )
-        )
-        .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{}] }.to_json))
     end
 
     it 'returns http success' do
@@ -78,15 +101,30 @@ RSpec.describe CatalogsController, type: :controller do
       @catalogs = create_list(:catalog, rand(1..9), genre_id: genre.id, category_id: category.id)
 
       @catalogs.each do |catalog|
-        allow(Net::HTTP)
-          .to receive(:get_response)
-          .with(
-            URI(
-              'https://api.themoviedb.org/3/search/tv?' \
-              "api_key=#{ENV.fetch('CINE4YOU_API_TMDB_KEY', nil)}&query=#{catalog.title}&language=pt-BR"
+        allow(Redis)
+          .to receive(:new)
+          .with(url: ENV.fetch('CINE4YOU_API_REDIS_URL', nil))
+          .and_return(
+            instance_double(
+              Redis,
+              get: {
+                id: catalog.id,
+                original_title: Faker::Movie.title,
+                release_date: '2022-01-01',
+                overview: Faker::Lorem.paragraph,
+                vote_average: '9.9',
+                vote_count: '999',
+                poster_path: '/poster_path.jpg',
+                cast: [
+                  {
+                    name: Faker::Name.name,
+                    character: Faker::Name.name,
+                    profile_path: '/profile_path.jpg'
+                  }
+                ]
+              }.to_json
             )
           )
-          .and_return(instance_double(Net::HTTPOK, code: '200', body: { 'results' => [{}] }.to_json))
       end
 
       @suggested_catalogs = rand(1..9).times.map { @catalogs.sample }.uniq

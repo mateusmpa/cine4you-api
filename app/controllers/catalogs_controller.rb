@@ -11,7 +11,7 @@ class CatalogsController < ApplicationController
       total_count: results.total_count,
       per_page: results.limit_value,
       page: results.current_page,
-      results:
+      results: results
     }
   end
 

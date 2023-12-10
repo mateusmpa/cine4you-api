@@ -8,13 +8,13 @@ class TmdbService
   def execute
     {
       catalog_id: @catalog.id,
-      original_title:,
-      release_date:,
-      overview:,
-      vote_average:,
-      vote_count:,
-      image_url:,
-      cast:
+      original_title: original_title,
+      release_date: release_date,
+      overview: overview,
+      vote_average: vote_average,
+      vote_count: vote_count,
+      image_url: image_url,
+      cast: cast
     }
   end
 

@@ -22,6 +22,10 @@ jobs:
           POSTGRES_DB: cine4you_api_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+      redis:
+        image: redis:6-alpine
+        ports:
+          - "6379:6379"
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://postgres:postgres@localhost:5432/cine4you_api_test"
