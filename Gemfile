@@ -35,7 +35,6 @@ end
 
 group :test do
   gem 'database_cleaner-active_record', '~> 2.1'
-  gem 'mock_redis', '~> 0.40.0'
   gem 'webmock', '~> 3.19', '>= 3.19.1'
 end
 
