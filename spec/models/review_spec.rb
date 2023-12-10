@@ -14,7 +14,7 @@ RSpec.describe Review, type: :model do
 
     subject { @review.good? }
 
-    context 'when rating is greater than 5' do
+    context 'when rating is greater than 3' do
       let(:rating) { rand(4..5) }
 
       it 'returns true' do
@@ -22,7 +22,7 @@ RSpec.describe Review, type: :model do
       end
     end
 
-    context 'when rating is less than 5' do
+    context 'when rating is less than 3' do
       let(:rating) { rand(1..2) }
 
       it 'returns false' do
@@ -30,7 +30,7 @@ RSpec.describe Review, type: :model do
       end
     end
 
-    context 'when rating is equal to 5' do
+    context 'when rating is equal to 3' do
       let(:rating) { 3 }
 
       it 'returns false' do
@@ -50,7 +50,7 @@ RSpec.describe Review, type: :model do
 
     subject { @review.neutral? }
 
-    context 'when rating is greater than 5' do
+    context 'when rating is greater than 3' do
       let(:rating) { rand(4..5) }
 
       it 'returns false' do
@@ -58,7 +58,7 @@ RSpec.describe Review, type: :model do
       end
     end
 
-    context 'when rating is less than 5' do
+    context 'when rating is less than 3' do
       let(:rating) { rand(1..2) }
 
       it 'returns false' do
@@ -66,7 +66,7 @@ RSpec.describe Review, type: :model do
       end
     end
 
-    context 'when rating is equal to 5' do
+    context 'when rating is equal to 3' do
       let(:rating) { 3 }
 
       it 'returns true' do
@@ -86,7 +86,7 @@ RSpec.describe Review, type: :model do
 
     subject { @review.bad? }
 
-    context 'when rating is greater than 5' do
+    context 'when rating is greater than 3' do
       let(:rating) { rand(4..5) }
 
       it 'returns false' do
@@ -94,7 +94,7 @@ RSpec.describe Review, type: :model do
       end
     end
 
-    context 'when rating is less than 5' do
+    context 'when rating is less than 3' do
       let(:rating) { rand(1..2) }
 
       it 'returns true' do
@@ -102,7 +102,7 @@ RSpec.describe Review, type: :model do
       end
     end
 
-    context 'when rating is equal to 5' do
+    context 'when rating is equal to 3' do
       let(:rating) { 3 }
 
       it 'returns false' do
