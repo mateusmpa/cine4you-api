@@ -2,7 +2,7 @@
 
 class SearchCatalogFromImdbWorker
   include Sidekiq::Worker
-  sidekiq_options queue: 'imdb'
+  sidekiq_options queue: 'imdb', retry: 5
 
   def perform(catalog_id)
     catalog = Catalog.find(catalog_id)
